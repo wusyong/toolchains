@@ -1,0 +1,18 @@
+build:aarch64 --crosstool_top=//tools/aarch64--glibc--stable-2018.02-2:toolchain
+build:aarch64 --cpu=aarch64
+# Bazel uses internal tools many of which are written in 
+# C++ (such as `process-wrapper`). Therefore we still need a sane
+# C++ toolchain for these tools.
+build:aarch64 --host_crosstool_top=@bazel_tools//tools/cpp:toolchain
+
+build:armv7 --crosstool_top=//tools/armv7-eabihf--glibc--stable-2018.02-2:toolchain
+build:armv7 --cpu=armeabi-v7a
+build:armv7 --host_crosstool_top=@bazel_tools//tools/cpp:toolchain
+
+build:i686 --crosstool_top=//tools/x86-i686--glibc--stable-2018.02-2:toolchain
+build:i686 --cpu=i686
+build:i686 --host_crosstool_top=@bazel_tools//tools/cpp:toolchain
+
+build:x86_64 --crosstool_top=//tools/x86-64-core-i7--glibc--stable-2018.02-2:toolchain
+build:x86_64 --cpu=x86_64
+build:x86_64 --host_crosstool_top=@bazel_tools//tools/cpp:toolchain

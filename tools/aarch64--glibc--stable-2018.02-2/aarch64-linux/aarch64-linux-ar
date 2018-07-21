@@ -1,0 +1,5 @@
+#!/bin/bash --norc
+
+exec -a aarch64-linux-ar \
+    external/bootlin_aarch64_toolchain/bin/aarch64-linux-ar \
+    "$@"

@@ -1,0 +1,5 @@
+#!/bin/bash --norc
+
+exec -a i686-linux-gcov \
+    external/bootlin_i686_toolchain/bin/i686-linux-gcov \
+    "$@"

@@ -1,0 +1,5 @@
+#!/bin/bash --norc
+
+exec -a x86_64-linux-ld \
+    external/bootlin_x86_64_toolchain/bin/x86_64-linux-ld \
+    "$@"
