@@ -1,4 +1,4 @@
-package(default_visibility = ["//tools/armv7-eabihf--glibc--stable-2018.02-2:__pkg__"])
+package(default_visibility = ["//tools/armv7-eabihf--glibc--bleeding-edge-2018.07-1:__pkg__"])
 
 filegroup(
     name = "gcc",

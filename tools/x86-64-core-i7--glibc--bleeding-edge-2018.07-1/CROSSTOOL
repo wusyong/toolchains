@@ -9,7 +9,7 @@ default_toolchain {
 
 toolchain {
   abi_version: "gcc"
-  abi_libc_version: "glibc_2.26.144"
+  abi_libc_version: "glibc_2.27.57"
   builtin_sysroot: ""
   compiler: "gcc"
   host_system_name: "local"
@@ -21,7 +21,7 @@ toolchain {
   supports_normalizing_ar: true
   supports_start_end_lib: false
   supports_thin_archives: true
-  target_libc: "glibc_2.26.144"
+  target_libc: "glibc_2.27.57"
   target_cpu: "x86_64"
   target_system_name: "x86_64"
   toolchain_identifier: "bootlin_x86_64_toolchain"
@@ -48,12 +48,12 @@ toolchain {
   compiler_flag: "external/bootlin_x86_64_toolchain/x86_64-buildroot-linux-gnu/sysroot/usr/include"
   # https://github.com/OpenLightingProject/ola/issues/1125 use "-I" instead of '-isystem"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_x86_64_toolchain/lib/gcc/x86_64-buildroot-linux-gnu/6.4.0/include"
+  compiler_flag: "external/bootlin_x86_64_toolchain/lib/gcc/x86_64-buildroot-linux-gnu/8.1.0/include"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_x86_64_toolchain/lib/gcc/x86_64-buildroot-linux-gnu/6.4.0/include-fixed"
+  compiler_flag: "external/bootlin_x86_64_toolchain/lib/gcc/x86_64-buildroot-linux-gnu/8.1.0/include-fixed"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_x86_64_toolchain/x86_64-buildroot-linux-gnu/include/c++/6.4.0"
+  compiler_flag: "external/bootlin_x86_64_toolchain/x86_64-buildroot-linux-gnu/include/c++/8.1.0"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_x86_64_toolchain/x86_64-buildroot-linux-gnu/include/c++/6.4.0/x86_64-buildroot-linux-gnu"
+  compiler_flag: "external/bootlin_x86_64_toolchain/x86_64-buildroot-linux-gnu/include/c++/8.1.0/x86_64-buildroot-linux-gnu"
 
 }

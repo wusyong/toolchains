@@ -48,12 +48,12 @@ toolchain {
   compiler_flag: "external/${toolchain_id}/${buildroot_dir}/sysroot/usr/include"
   # https://github.com/OpenLightingProject/ola/issues/1125 use "-I" instead of '-isystem"
   compiler_flag: "-I"
-  compiler_flag: "external/${toolchain_id}/lib/gcc/${buildroot_dir}/6.4.0/include"
+  compiler_flag: "external/${toolchain_id}/lib/gcc/${buildroot_dir}/${gcc_version}/include"
   compiler_flag: "-I"
-  compiler_flag: "external/${toolchain_id}/lib/gcc/${buildroot_dir}/6.4.0/include-fixed"
+  compiler_flag: "external/${toolchain_id}/lib/gcc/${buildroot_dir}/${gcc_version}/include-fixed"
   compiler_flag: "-I"
-  compiler_flag: "external/${toolchain_id}/${buildroot_dir}/include/c++/6.4.0"
+  compiler_flag: "external/${toolchain_id}/${buildroot_dir}/include/c++/${gcc_version}"
   compiler_flag: "-I"
-  compiler_flag: "external/${toolchain_id}/${buildroot_dir}/include/c++/6.4.0/${buildroot_dir}"
+  compiler_flag: "external/${toolchain_id}/${buildroot_dir}/include/c++/${gcc_version}/${buildroot_dir}"
 
 }

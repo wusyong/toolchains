@@ -9,7 +9,7 @@ default_toolchain {
 
 toolchain {
   abi_version: "gcc"
-  abi_libc_version: "glibc_2.26.144"
+  abi_libc_version: "glibc_2.27.57"
   builtin_sysroot: ""
   compiler: "gcc"
   host_system_name: "local"
@@ -21,7 +21,7 @@ toolchain {
   supports_normalizing_ar: true
   supports_start_end_lib: false
   supports_thin_archives: true
-  target_libc: "glibc_2.26.144"
+  target_libc: "glibc_2.27.57"
   target_cpu: "armeabi-v7a"
   target_system_name: "armeabi-v7a"
   toolchain_identifier: "bootlin_arm_toolchain"
@@ -48,12 +48,12 @@ toolchain {
   compiler_flag: "external/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/sysroot/usr/include"
   # https://github.com/OpenLightingProject/ola/issues/1125 use "-I" instead of '-isystem"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_arm_toolchain/lib/gcc/arm-buildroot-linux-gnueabihf/6.4.0/include"
+  compiler_flag: "external/bootlin_arm_toolchain/lib/gcc/arm-buildroot-linux-gnueabihf/8.1.0/include"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_arm_toolchain/lib/gcc/arm-buildroot-linux-gnueabihf/6.4.0/include-fixed"
+  compiler_flag: "external/bootlin_arm_toolchain/lib/gcc/arm-buildroot-linux-gnueabihf/8.1.0/include-fixed"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/include/c++/6.4.0"
+  compiler_flag: "external/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/include/c++/8.1.0"
   compiler_flag: "-I"
-  compiler_flag: "external/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/include/c++/6.4.0/arm-buildroot-linux-gnueabihf"
+  compiler_flag: "external/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/include/c++/8.1.0/arm-buildroot-linux-gnueabihf"
 
 }

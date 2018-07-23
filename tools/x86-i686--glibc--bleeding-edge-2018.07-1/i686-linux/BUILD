@@ -1,4 +1,4 @@
-package(default_visibility = ["//tools/x86-i686--glibc--stable-2018.02-2:__pkg__"])
+package(default_visibility = ["//tools/x86-i686--glibc--bleeding-edge-2018.07-1:__pkg__"])
 
 filegroup(
     name = "gcc",

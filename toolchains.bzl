@@ -3,35 +3,35 @@ def setup_toolchains():
     native.new_http_archive(
         name="bootlin_aarch64_toolchain",
         url=
-        "https://toolchains.bootlin.com/downloads/releases/toolchains/aarch64/tarballs/aarch64--glibc--stable-2018.02-2.tar.bz2",
+        "https://toolchains.bootlin.com/downloads/releases/toolchains/aarch64/tarballs/aarch64--glibc--bleeding-edge-2018.07-1.tar.bz2",
         sha256=
-        "8384146f3e79591f41b32d553fcb518c05667ddcbabe01feb1da4b7350b8f3ff",
-        strip_prefix="aarch64--glibc--stable-2018.02-2",
-        build_file="@iota_toolchains//:compilers/aarch64--glibc--stable-2018.02-2.BUILD", )
+        "958ff195a79554144f25d1299fc6f8e5c3c35d060dec79baa99b898b8b00f10a",
+        strip_prefix="aarch64--glibc--bleeding-edge-2018.07-1",
+        build_file="@iota_toolchains//:compilers/aarch64--glibc--bleeding-edge-2018.07-1.BUILD", )
     # armv7
     native.new_http_archive(
         name="bootlin_arm_toolchain",
         url=
-        "https://toolchains.bootlin.com/downloads/releases/toolchains/armv7-eabihf/tarballs/armv7-eabihf--glibc--stable-2018.02-2.tar.bz2",
+        "https://toolchains.bootlin.com/downloads/releases/toolchains/armv7-eabihf/tarballs/armv7-eabihf--glibc--bleeding-edge-2018.07-1.tar.bz2",
         sha256=
-        "32723810be37418bb9e5a7da5bec96719bf0c2eb2b919f85dfd5a02c449a451f",
-        strip_prefix="armv7-eabihf--glibc--stable-2018.02-2",
-        build_file="@iota_toolchains//:compilers/armv7-eabihf--glibc--stable-2018.02-2.BUILD", )
+        "d884e7459c6d64cf108c94b1fbd7924e10703ad5837831c3c88a3eabefc6c8da",
+        strip_prefix="armv7-eabihf--glibc--bleeding-edge-2018.07-1",
+        build_file="@iota_toolchains//:compilers/armv7-eabihf--glibc--bleeding-edge-2018.07-1.BUILD", )
     # i686
     native.new_http_archive(
         name="bootlin_i686_toolchain",
         url=
-        "https://toolchains.bootlin.com/downloads/releases/toolchains/x86-i686/tarballs/x86-i686--glibc--stable-2018.02-2.tar.bz2",
+        "https://toolchains.bootlin.com/downloads/releases/toolchains/x86-i686/tarballs/x86-i686--glibc--bleeding-edge-2018.07-1.tar.bz2",
         sha256=
-        "d00ef0f101aed2f61f8f81a6ce61f4015c1a8493eaa526857791e90e6bf0173b",
-        strip_prefix="x86-i686--glibc--stable-2018.02-2",
-        build_file="@iota_toolchains//:compilers/x86-i686--glibc--stable-2018.02-2.BUILD", )
+        "5ec38774469cadadfffac47392eab084f893be6a7c84fad76b371159879be74e",
+        strip_prefix="x86-i686--glibc--bleeding-edge-2018.07-1",
+        build_file="@iota_toolchains//:compilers/x86-i686--glibc--bleeding-edge-2018.07-1.BUILD", )
     # x86_64
     native.new_http_archive(
         name="bootlin_x86_64_toolchain",
         url=
-        "https://toolchains.bootlin.com/downloads/releases/toolchains/x86-64-core-i7/tarballs/x86-64-core-i7--glibc--stable-2018.02-2.tar.bz2",
+        "https://toolchains.bootlin.com/downloads/releases/toolchains/x86-64-core-i7/tarballs/x86-64-core-i7--glibc--bleeding-edge-2018.07-1.tar.bz2",
         sha256=
-        "2e2e60ddf593aaea4dace384b46c1132a66a4e182975194efc02407f8adf75d1",
-        strip_prefix="x86-64-core-i7--glibc--stable-2018.02-2",
-        build_file="@iota_toolchains//:compilers/x86-64-core-i7--glibc--stable-2018.02-2.BUILD", )
+        "9bc9e7e87494f29da123889666119ba3bcdf00b1804d500ec2643f7920ac1cd5",
+        strip_prefix="x86-64-core-i7--glibc--bleeding-edge-2018.07-1",
+        build_file="@iota_toolchains//:compilers/x86-64-core-i7--glibc--bleeding-edge-2018.07-1.BUILD", )
