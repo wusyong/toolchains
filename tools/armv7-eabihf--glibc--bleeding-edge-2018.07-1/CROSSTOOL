@@ -56,4 +56,35 @@ toolchain {
   compiler_flag: "-I"
   compiler_flag: "external/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/include/c++/8.1.0/arm-buildroot-linux-gnueabihf"
 
+  linker_flag: "--sysroot=external/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/sysroot"
+  linker_flag: "-Bexternal/bootlin_arm_toolchain/arm-buildroot-linux-gnueabihf/bin"
+  linker_flag: "-lstdc++"
+  linker_flag: "-lm"
+  linker_flag: "-lpthread"
+
+  # Anticipated future default.
+  # This makes GCC and Clang do what we want when called through symlinks.
+  unfiltered_cxx_flag: "-no-canonical-prefixes"
+  linker_flag: "-no-canonical-prefixes"
+
+  # Make C++ compilation deterministic. Use linkstamping instead of these
+  # compiler symbols.
+  unfiltered_cxx_flag: "-Wno-builtin-macro-redefined"
+  unfiltered_cxx_flag: "-D__DATE__=\"redacted\""
+  unfiltered_cxx_flag: "-D__TIMESTAMP__=\"redacted\""
+  unfiltered_cxx_flag: "-D__TIME__=\"redacted\""
+
+  # Security hardening on by default.
+  # Conservative choice; -D_FORTIFY_SOURCE=2 may be unsafe in some cases.
+  # We need to undef it before redefining it as some distributions now have
+  # it enabled by default.
+  compiler_flag: "-U_FORTIFY_SOURCE"
+  compiler_flag: "-fstack-protector"
+  compiler_flag: "-fPIE"
+  linker_flag: "-pie"
+  linker_flag: "-Wl,-z,relro,-z,now"
+
+  # Enable coloring even if there's no attached terminal. Bazel removes the
+  # escape sequences if --nocolor is specified.
+  compiler_flag: "-fdiagnostics-color=always"
 }

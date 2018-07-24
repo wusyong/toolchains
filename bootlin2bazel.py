@@ -19,7 +19,7 @@ def gen_tool_wrappers():
         with open(filename, "w+") as f:
             f.write(temp.substitute(target_conf))
 
-        os.chmod(filename, 0o555)
+        os.chmod(filename, 0o777)
 
 
 def gen_tools(file_name, template):
