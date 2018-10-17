@@ -27,3 +27,10 @@ new_http_archive(
   url = 'https://toolchains.bootlin.com/downloads/releases/toolchains/x86-64-core-i7/tarballs/x86-64-core-i7--glibc--bleeding-edge-2018.07-1.tar.bz2',
   strip_prefix = 'x86-64-core-i7--glibc--bleeding-edge-2018.07-1',
 )
+
+new_http_archive(
+  name = 'xtensa_esp32_elf_linux64',
+  build_file = 'compilers/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.BUILD',
+  url = 'https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz',
+  strip_prefix = 'xtensa-esp32-elf',
+)

@@ -2,12 +2,12 @@
 
 x86_64 cross comile
 ```
-bazel build --config=x86_64 hello
+bazel build --config=x86_64 //tests:hello
 ```
 
 ARMv8 cross compile
 ```
-bazel build --config=aarch64 hello
+bazel build --config=aarch64 //tests:hello
 ```
 
 # Genrate a New toolchain  

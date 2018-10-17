@@ -37,3 +37,13 @@ i686:
   toolchain_id: "bootlin_i686_toolchain"
   glibc_version: "glibc_2.27.57"
   gcc_version: "8.1.0"
+
+esp32_64:
+  cpu_type: "xtensa"
+  tarball_url: "https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz"
+  tool_perfix: "xtensa-esp32-elf"
+  strip_perfix: "xtensa-esp32-elf"
+  buildroot_dir: "xtensa-esp32-elf"
+  toolchain_id: "xtensa_esp32_elf_linux64"
+  glibc_version: "glibc_2.27.57"
+  gcc_version: "5.2.0"

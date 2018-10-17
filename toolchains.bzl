@@ -35,3 +35,12 @@ def setup_toolchains():
         "9bc9e7e87494f29da123889666119ba3bcdf00b1804d500ec2643f7920ac1cd5",
         strip_prefix="x86-64-core-i7--glibc--bleeding-edge-2018.07-1",
         build_file="@iota_toolchains//:compilers/x86-64-core-i7--glibc--bleeding-edge-2018.07-1.BUILD", )
+    # esp32_64
+    native.new_http_archive(
+        name="xtensa_esp32_elf_linux64",
+        url=
+        "https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-73-ge28a011-5.2.0.tar.gz",
+        sha256=
+        "3fe96c151d46c1d4e5edc6ed690851b8e53634041114bad04729bc16b0445156",
+        strip_prefix="xtensa-esp32-elf",
+        build_file="@iota_toolchains//:compilers/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.BUILD", )
