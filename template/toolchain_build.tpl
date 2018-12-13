@@ -3,6 +3,7 @@ cc_toolchain_suite(
     # target_cpu | compiler
     toolchains = {
         "${cpu_type}|gcc": "bootlin-${cpu_type}",
+        "${cpu_type}": "bootlin-${cpu_type}",
     },
 )
 

@@ -3,6 +3,7 @@ cc_toolchain_suite(
     # target_cpu | compiler
     toolchains = {
         "x86_64|gcc": "bootlin-x86_64",
+        "x86_64": "bootlin-x86_64",
     },
 )
 

@@ -3,6 +3,7 @@ cc_toolchain_suite(
     # target_cpu | compiler
     toolchains = {
         "i686|gcc": "bootlin-i686",
+        "i686": "bootlin-i686",
     },
 )
 

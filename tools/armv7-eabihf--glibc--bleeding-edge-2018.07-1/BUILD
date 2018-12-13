@@ -3,6 +3,7 @@ cc_toolchain_suite(
     # target_cpu | compiler
     toolchains = {
         "armeabi-v7a|gcc": "bootlin-armeabi-v7a",
+        "armeabi-v7a": "bootlin-armeabi-v7a",
     },
 )
 
