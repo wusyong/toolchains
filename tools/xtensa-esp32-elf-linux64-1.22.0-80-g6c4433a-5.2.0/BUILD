@@ -3,6 +3,7 @@ cc_toolchain_suite(
     # target_cpu | compiler
     toolchains = {
         "xtensa|gcc": "bootlin-xtensa",
+        "xtensa": "bootlin-xtensa",
     },
 )
 

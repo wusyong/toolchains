@@ -3,6 +3,7 @@ cc_toolchain_suite(
     # target_cpu | compiler
     toolchains = {
         "aarch64|gcc": "bootlin-aarch64",
+        "aarch64": "bootlin-aarch64",
     },
 )
 
