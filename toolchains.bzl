@@ -43,6 +43,6 @@ def setup_toolchains():
         url=
         "https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-73-ge28a011-5.2.0.tar.gz",
         sha256=
-        "3fe96c151d46c1d4e5edc6ed690851b8e53634041114bad04729bc16b0445156",
+        "3763dbed9fd43901c07757622e9c46d29e89eda812b83627df5cb9d019cae0e5",
         strip_prefix="xtensa-esp32-elf",
         build_file="@iota_toolchains//:compilers/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.BUILD", )
