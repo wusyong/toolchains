@@ -1,3 +1,12 @@
+package(default_visibility = ["//visibility:public"])
+
+load(":cc_toolchain_config.bzl", "cc_toolchain_config")
+
+cc_toolchain_config(
+    name = "xtensa_toolchain_config",
+    cpu = "xtensa",
+)
+
 cc_toolchain_suite(
     name = "toolchain",
     # target_cpu | compiler
@@ -51,14 +60,14 @@ cc_toolchain(
     ar_files = "//tools/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf:ar",
     as_files = "//tools/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf:as",
     compiler_files = ":linux_compiler_files",
-    cpu = "xtensa",
     dwp_files = ":empty",
-    dynamic_runtime_libs = [":empty"],
+    dynamic_runtime_lib = ":empty",
     linker_files = ":linux_linker_files",
     objcopy_files = "//tools/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf:objcopy",
-    static_runtime_libs = [":empty"],
+    static_runtime_lib = ":empty",
     strip_files = "//tools/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf:strip",
     supports_param_files = 1,
+    toolchain_config = ":xtensa_toolchain_config",
+    toolchain_identifier = "xtensa_toolchain",
     visibility = ["//visibility:public"],
 )
-

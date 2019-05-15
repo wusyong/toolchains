@@ -1,5 +1,12 @@
 package(default_visibility = ["//visibility:public"])
 
+load(":cc_toolchain_config.bzl", "cc_toolchain_config")
+
+cc_toolchain_config(
+    name = "aarch64_toolchain_config",
+    cpu = "aarch64",
+)
+
 cc_toolchain_suite(
     name = "toolchain",
     # target_cpu | compiler
@@ -53,14 +60,14 @@ cc_toolchain(
     ar_files = "//tools/aarch64--glibc--bleeding-edge-2018.07-1/aarch64-linux:ar",
     as_files = "//tools/aarch64--glibc--bleeding-edge-2018.07-1/aarch64-linux:as",
     compiler_files = ":linux_compiler_files",
-    cpu = "aarch64",
     dwp_files = ":empty",
-    dynamic_runtime_libs = [":empty"],
+    dynamic_runtime_lib = ":empty",
     linker_files = ":linux_linker_files",
     objcopy_files = "//tools/aarch64--glibc--bleeding-edge-2018.07-1/aarch64-linux:objcopy",
-    static_runtime_libs = [":empty"],
+    static_runtime_lib = ":empty",
     strip_files = "//tools/aarch64--glibc--bleeding-edge-2018.07-1/aarch64-linux:strip",
     supports_param_files = 1,
+    toolchain_config = ":aarch64_toolchain_config",
+    toolchain_identifier = "aarch64_toolchain",
     visibility = ["//visibility:public"],
 )
-

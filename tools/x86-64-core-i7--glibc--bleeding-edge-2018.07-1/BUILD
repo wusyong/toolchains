@@ -1,5 +1,12 @@
 package(default_visibility = ["//visibility:public"])
 
+load(":cc_toolchain_config.bzl", "cc_toolchain_config")
+
+cc_toolchain_config(
+    name = "x86_64_toolchain_config",
+    cpu = "x86_64",
+)
+
 cc_toolchain_suite(
     name = "toolchain",
     # target_cpu | compiler
@@ -53,14 +60,14 @@ cc_toolchain(
     ar_files = "//tools/x86-64-core-i7--glibc--bleeding-edge-2018.07-1/x86_64-linux:ar",
     as_files = "//tools/x86-64-core-i7--glibc--bleeding-edge-2018.07-1/x86_64-linux:as",
     compiler_files = ":linux_compiler_files",
-    cpu = "x86_64",
     dwp_files = ":empty",
-    dynamic_runtime_libs = [":empty"],
+    dynamic_runtime_lib = ":empty",
     linker_files = ":linux_linker_files",
     objcopy_files = "//tools/x86-64-core-i7--glibc--bleeding-edge-2018.07-1/x86_64-linux:objcopy",
-    static_runtime_libs = [":empty"],
+    static_runtime_lib = ":empty",
     strip_files = "//tools/x86-64-core-i7--glibc--bleeding-edge-2018.07-1/x86_64-linux:strip",
     supports_param_files = 1,
+    toolchain_config = ":x86_64_toolchain_config",
+    toolchain_identifier = "x86_64_toolchain",
     visibility = ["//visibility:public"],
 )
-

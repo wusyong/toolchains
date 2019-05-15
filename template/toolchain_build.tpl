@@ -55,12 +55,11 @@ cc_toolchain(
     compiler_files = ":linux_compiler_files",
     cpu = "${cpu_type}",
     dwp_files = ":empty",
-    dynamic_runtime_libs = [":empty"],
+    dynamic_runtime_lib = ":empty",
     linker_files = ":linux_linker_files",
     objcopy_files = "//tools/${strip_perfix}/${tool_perfix}:objcopy",
-    static_runtime_libs = [":empty"],
+    static_runtime_lib = ":empty",
     strip_files = "//tools/${strip_perfix}/${tool_perfix}:strip",
     supports_param_files = 1,
     visibility = ["//visibility:public"],
 )
-

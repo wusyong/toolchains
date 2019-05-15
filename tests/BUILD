@@ -6,8 +6,8 @@ cc_binary(
 
 cc_library(
     name = "hi",
-    srcs = ["hi.c",],
-    hdrs = ["hi.h",],
-#    includes = [".",],
+    srcs = ["hi.c"],
+    hdrs = ["hi.h"],
+    #    includes = [".",],
     visibility = ["//visibility:public"],
 )
