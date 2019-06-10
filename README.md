@@ -1,6 +1,6 @@
-# IOTA toolchains
+# IOTA toolchains 
 
-x86_64 cross comile
+x86_64 cross compile
 ```
 bazel build --config=x86_64 //tests:hello
 ```
