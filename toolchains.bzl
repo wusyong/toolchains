@@ -49,7 +49,7 @@ def setup_toolchains():
     #emscripten
     http_archive(
         name = "emscripten_toolchain",
-        build_file = "//tools/emscripten:emscripten-toolchain.BUILD",
+        build_file = "@iota_toolchains//:tools/emscripten/emscripten-toolchain.BUILD",
         strip_prefix = "emscripten-1.38.31",
         url = "https://github.com/kripken/emscripten/archive/1.38.31.tar.gz",
         sha256 = "c87e42cb6a104094e7daf2b7e61ac835f83674ac0168f533455838a1129cc764",
@@ -57,7 +57,7 @@ def setup_toolchains():
 
     http_archive(
         name = "emscripten_clang",
-        build_file = "//tools/emscripten:emscripten-clang.BUILD",
+        build_file = "@iota_toolchains//:compilers/emscripten-clang.BUILD",
         strip_prefix = "emscripten-llvm-e1.38.31",
         url = "https://s3.amazonaws.com/mozilla-games/emscripten/packages/llvm/tag/linux_64bit/emscripten-llvm-e1.38.31.tar.gz",
         sha256 = "a0c2f2c5a897577f40af0fdf68dcf3cf65557ff20c081df26678c066a4fed4b1",
