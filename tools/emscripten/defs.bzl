@@ -4,6 +4,7 @@ def emcc_binary(
         wasm = True,
         worker = False,
         linkopts = [],
+        defines = [],
         **kwargs):
     includejs = False
     includehtml = False
@@ -36,7 +37,7 @@ def emcc_binary(
         tarfile = name + ".tar"
 
         # we'll generate a tarfile and extract multiple outputs
-        native.cc_binary(name = tarfile, linkopts = linkopts, **kwargs)
+        native.cc_binary(name = tarfile, linkopts = linkopts, defines = defines, **kwargs)
         native.genrule(
             name = "emcc_extract_" + tarfile,
             srcs = [tarfile],
