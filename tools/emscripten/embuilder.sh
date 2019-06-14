@@ -19,7 +19,7 @@ mkdir -p "/tmp/emscripten_cache"
 export EM_CACHE="/tmp/emscripten_cache"
 # export EMCC_TEMP_DIR="$PWD/tmp"
 export EMCC_WASM_BACKEND=0
-python external/emscripten_toolchain/embuilder.py "$@"
+python3 external/emscripten_toolchain/embuilder.py "$@"
 
 # Remove the first line of .d file (emscripten resisted all my attempts to make
 # it realize it's just the absolute location of the source)

@@ -22,7 +22,7 @@ for (( i=0; i<$#; i++ )); do
 done
 
 
-python external/emscripten_toolchain/emcc.py "${argv[@]}"
+python3 external/emscripten_toolchain/emcc.py "${argv[@]}"
 
 
 # Now create the tarfile
